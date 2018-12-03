@@ -1,0 +1,26 @@
+<form (submit)="onEditEmployee(employeeForm)" #employeeForm="ngForm">
+  <mat-vertical-stepper>
+    <mat-step label="Update Employee Number">
+      <mat-form-field>
+        <input matInput type="text" name="empNum" ngModel={{employee.empNum}} required #empNum="ngModel">
+      </mat-form-field>
+    </mat-step>
+    <mat-step label="Update Employee Name">
+      <mat-form-field>
+        <textarea matInput name="empName" ngModel={{employee.empName}} required #empName="ngModel">
+        </textarea>
+      </mat-form-field>
+    </mat-step>
+    <mat-step label="Update Employee Job Title">
+      <mat-form-field>
+        <textarea matInput name="empJobTitle" ngModel={{employee.empJobTitle}} required #empJobTitle="ngModel">
+        </textarea>
+      </mat-form-field>
+    </mat-step>
+    <mat-step label="Final Step!">
+      <div>
+        <button mat-button type="submit">Submit</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</form>

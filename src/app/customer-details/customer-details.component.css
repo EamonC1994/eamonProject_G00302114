@@ -1,0 +1,19 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+mat-list-option {
+    background: lightblue;
+  }
+
+  table.layoout {
+      table-layout: fixed;
+      width: 100%;
+      background-color: rgb(253, 221, 227);
+      color: black;
+      border: 5px solid rgb(252, 173, 186);
+      text-align:center
+  }
+
+  mat-toolbar.col{
+    background-color: rgba(128, 128, 128, 0.402);
+    color: white;
+}

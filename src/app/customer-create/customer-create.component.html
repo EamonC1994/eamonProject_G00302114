@@ -1,0 +1,33 @@
+<br>
+<mat-toolbar class="col">New Customer Record</mat-toolbar>
+<br>
+<mat-card>
+  <form (submit)="onAddCustomer(customerForm)" #customerForm="ngForm">
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile class="pink">
+        <div>
+          <mat-form-field>
+            <input placeholder="Customer Name" matInput type="text" name="custName" ngModel required #custName="ngModel">
+            <mat-error *ngIf="custName.invalid">Please enter a new customer name.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea placeholder="Customer Email" matInput name="custEmail" ngModel required #custEmail="ngModel"></textarea>
+            <mat-error *ngIf="custEmail.invalid">Please enter a new customer email.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea placeholder="Customer Mobile" matInput name="custNum" ngModel required #custNum="ngModel"></textarea>
+            <mat-error *ngIf="custNum.invalid">Please enter a new customer mobile.</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="warn" type="submit">Add Customer</button>
+          <button mat-raised-button color="accent" type="reset">Clear</button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img mat-card-image src="http://www.egiftafrica.com/wp-content/uploads/2016/04/3-Tips-to-Increase-Customer-Loyalty.jpeg"
+          style="width:90%">
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</mat-card>
+<br>
+<br>

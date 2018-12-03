@@ -1,0 +1,33 @@
+<br>
+<mat-toolbar class="col">New Employee Record</mat-toolbar>
+<br>
+<mat-card>
+  <form (submit)="onAddEmployee(employeeForm)" #employeeForm="ngForm">
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile class="blue">
+        <div>
+          <mat-form-field>
+            <input placeholder="Employee Number" matInput type="text" name="empNum" ngModel required #empNum="ngModel">
+            <mat-error *ngIf="empNum.invalid">Please enter new employee number.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea placeholder="Employee Name" matInput name="empName" ngModel required #empName="ngModel"></textarea>
+            <mat-error *ngIf="empName.invalid">Please enter a new employee name.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea placeholder="Employee Job Title" matInput name="empJobTitle" ngModel required #empJobTitle="ngModel"></textarea>
+            <mat-error *ngIf="empJobTitle.invalid">Please enter a new employee job title.</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="warn" type="submit">Add Employee</button>
+          <button mat-raised-button color="accent" type="reset">Clear</button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img mat-card-image src="https://cdn7.bigcommerce.com/s-qcjhe6fjzo/images/stencil/1280x1280/products/19127/12643/IN-12-108I-R__91757.1524077255.jpg?c=2&imbypass=on"
+          style="width:90%">
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</mat-card>
+
+<br>

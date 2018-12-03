@@ -1,0 +1,32 @@
+<br>
+<mat-toolbar class="col">Employee Information</mat-toolbar>
+
+<br>
+<table class="layoout">
+  <thead>
+    <tr>
+      <th>Employee Number</th>
+      <th>Employee Name</th>
+      <th>Employee Job Title</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let employee of employees">
+    <td>{{ employee.empNum }}</td>
+    <td>{{ employee.empName }}</td>
+    <td>{{ employee.empJobTitle }}</td>
+    <td>
+      <button mat-button [routerLink]="['/edit_employee', employee._id]" color="primary">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </td>
+    <td>
+      <button mat-button (click)="onDeleteEmp(employee._id)" color="warn">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </tr>
+</table>
+
+<p class="info-text mat-body-1" *ngIf="employees.length <= 0">No employee added yet!</p>

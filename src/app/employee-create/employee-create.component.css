@@ -1,0 +1,22 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+mat-form-field,
+textarea {
+  width: 100%;
+}
+
+mat-grid-tile.blue {
+  background: lightblue;
+  border: 5px solid rgb(82, 195, 233);
+}
+
+mat-grid-tile.pink {
+  background-color: rgb(253, 221, 227);
+  border: 5px solid rgb(252, 173, 186);
+}
+
+mat-toolbar.col{
+  background-color: rgba(128, 128, 128, 0.402);
+  color: white;
+}

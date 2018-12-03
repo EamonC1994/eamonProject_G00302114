@@ -1,0 +1,26 @@
+<form (submit)="onEditCustomer(customerForm)" #customerForm="ngForm">
+  <mat-vertical-stepper>
+    <mat-step label="Update Customer Name">
+      <mat-form-field>
+        <input matInput type="text" name="custName" ngModel={{customer.custName}} required #custName="ngModel">
+      </mat-form-field>
+    </mat-step>
+    <mat-step label="Update Customer Email">
+      <mat-form-field>
+        <textarea matInput name="custEmail" ngModel={{customer.custEmail}} required #custEmail="ngModel">
+        </textarea>
+      </mat-form-field>
+    </mat-step>
+    <mat-step label="Update Customer Number">
+      <mat-form-field>
+        <textarea matInput name="custNum" ngModel={{customer.custNum}} required #custNum="ngModel">
+        </textarea>
+      </mat-form-field>
+    </mat-step>
+    <mat-step label="Final Step!">
+      <div>
+        <button mat-button type="submit">Submit</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</form>

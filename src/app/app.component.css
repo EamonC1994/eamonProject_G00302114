@@ -1,1 +1,10 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.title-center {
+    margin: 0 auto;
+    width: 20%;
+  }
+
+  mat-tool-row.title-center {
+    margin: 0 auto;
+  }
